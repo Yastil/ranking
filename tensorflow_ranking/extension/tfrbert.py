@@ -40,6 +40,16 @@ class TFRBertRankingNetwork(tfrkeras_network.UnivariateRankingNetwork):
                bert_output_dropout,
                name="tfrbert",
                **kwargs):
+    """Notes:
+       1. kwargs allows the __init__ method to accept any number of arguments
+       2. the self argument is used by all methods in a class. It allows 
+          access to any method or argument defined within a class. This means 
+          that instead of parsing every argument into a method within a class
+          ,you can just parse the self argument. 
+       3. The __init__ method is used to create an instance of a class. Hence
+          to create an instance of this class one would define: 
+          instance = TFBertRankingNetwork(context_feature_columns...) """
+    
     """Initializes an instance of TFRBertRankingNetwork.
 
     Args:
